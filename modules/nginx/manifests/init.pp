@@ -16,6 +16,7 @@ ensure => installed,
 }
 service { 'nginx':
 ensure => running,
+enable => false,
 require => Package['nginx'],
 }
 file { '/etc/nginx/sites-enabled/default':
