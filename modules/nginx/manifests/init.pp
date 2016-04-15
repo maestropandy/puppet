@@ -20,8 +20,9 @@ enable => false,
 require => Package['nginx'],
 }
 file { '/etc/nginx/sites-enabled/default':
-source => 'puppet:///modules/nginx/cat-pic.conf',
-notify => Service['nginx'],
+#source => 'puppet:///modules/nginx/cat-pic.conf',
+#notify => Service['nginx'],
+ensure => absent,
 }
 }
 

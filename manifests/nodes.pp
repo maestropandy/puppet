@@ -1,3 +1,5 @@
 node 'demo' {
-  include nginx
+class { 'ntp':
+server => 'us.pool.ntp.org',
+}
 }
